@@ -1,1 +1,13 @@
-<p>servers works!</p>
+<div class="row">
+    <div class="col">
+        
+        <div class="card mt-2" *ngFor="let item of servidores ">
+            <div class="card-header">{{item.name}}</div>
+            <div class="card-body">
+                <h5 class="card-title">Server status</h5>
+                <p class="card-text">{{item.status}}</p>
+            </div>
+        </div>
+
+    </div>
+</div>

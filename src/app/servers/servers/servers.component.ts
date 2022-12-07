@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../../services/service.service';
+import { Server } from '../../interfaces/servers';
 
 @Component({
   selector: 'app-servers',
@@ -6,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ssService : ServiceService) { }
 
   ngOnInit(): void {
   }
 
+  get  servidores():Server []{
+    return this.ssService.servers;
+  }
 }

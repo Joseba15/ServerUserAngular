@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { ServersModule } from './servers/servers.module';
 import { UsersModule } from './users/users.module';
+import { HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UsersModule } from './users/users.module';
     AppRoutingModule,
     SharedModule,
     ServersModule,
-    UsersModule
+    UsersModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
