@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../../services/service.service';
 import { User } from '../../interfaces/users';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -19,9 +20,8 @@ export class UsersComponent implements OnInit {
           this.res=resp;
         }
       })
+
+      
+
     }
 }
-
-
-
-

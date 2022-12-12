@@ -13,6 +13,7 @@ export class ServiceService {
   
   private url:string= 'http://localhost:3000/users';
 
+
   private _servers = [
     {
     id: 1,
@@ -42,8 +43,8 @@ export class ServiceService {
     return this.http.get<User[]>(this.url)  
   }
 
+  getUser(id:number):Observable<User>{
+    return this.http.get<User>(this.url+'/'+id)  
+  }
 
-  
- 
-  
 }
