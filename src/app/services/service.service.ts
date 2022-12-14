@@ -39,12 +39,16 @@ export class ServiceService {
     return [...this._servers];
   }
 
+  getserverId(id:number) {
+    return this.servers.filter
+  }
+
   getUsers():Observable<User[]>{
     return this.http.get<User[]>(this.url)  
   }
 
   getUser(id:number):Observable<User>{
-    return this.http.get<User>(this.url+'/'+id)  
+    return this.http.get<User>(this.url+'/'+id)   
   }
 
 }

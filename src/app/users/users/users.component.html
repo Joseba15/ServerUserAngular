@@ -7,6 +7,9 @@
                 <span><strong>User id:</strong>{{item.id}}</span>
                 <br>
                 <span><strong>User email: </strong>{{item.email}}</span>
+                <br>
+                <a [routerLink]="['/user', item.id , item.name]">{{item.name}} profile</a>
+
             </div>
         </div>
     </div>

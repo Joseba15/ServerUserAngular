@@ -7,6 +7,9 @@
                 <h5 class="card-title">Server status</h5>
                 <p class="card-text">{{item.status}}</p>
             </div>
+            <br>
+            <a href="#" class="list-group-item list-group-item-action" [routerLink]="['/servers', item.name , 'edit']"  
+            [queryParams]="{allowEdit: '1'}" fragment="loading">Edit Server</a>
         </div>
         <br>
         <button class="btn btn-info" (click)="onReload()">Reload Servers</button>
