@@ -3,14 +3,20 @@
         <!-- Mostraremos una tarjeta por cada usuario -->
         <div class="card mt-2" *ngFor="let item of res">
             <div class="card-header">{{item.name}}</div>
-            <div class="card-body">
+            <div class="card-body" >
                 <span><strong>User id:</strong>{{item.id}}</span>
                 <br>
                 <span><strong>User email: </strong>{{item.email}}</span>
                 <br>
-                <a [routerLink]="['/user', item.id , item.name]">{{item.name}} profile</a>
-
+                <a [routerLink]="[item.id , item.name]">{{item.name}} profile</a>
+                
             </div>
         </div>
     </div>
+    <br>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
 </div>
+<br>
+

@@ -6,6 +6,7 @@ import { ServersComponent } from './servers/servers/servers.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { UserComponent } from './users/user/user.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
+import { ServerComponent } from './servers/server/server.component';
 
 const routes: Routes = [
     {
@@ -14,19 +15,22 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'users',
-        component: UsersComponent
+        path: 'users',component: UsersComponent,children:[
+            {path: ':id/:name', component: UserComponent},
+        ]
     },
     {
-        path: 'servers',
-        component: ServersComponent
+        path: 'servers', component: ServersComponent, children :[
+            {path: ':id/edit', component: EditServerComponent},
+            {path: ':id', component: ServerComponent }
+        ]
     },
     {
         path: 'user/:id/:name',
         component: UserComponent
     },
     {
-        path: 'servers/:id/edit',
+        path: 'servers',
         component: EditServerComponent
     },
     {

@@ -39,8 +39,8 @@ export class ServiceService {
     return [...this._servers];
   }
 
-  getserverId(id:number) {
-    return this.servers.filter
+  getserverId(id:number):Server {
+    return this.servers[id-1]
   }
 
   getUsers():Observable<User[]>{

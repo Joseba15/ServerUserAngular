@@ -9,13 +9,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ServersComponent implements OnInit {
 
-  constructor(private ssService : ServiceService, private router:Router, private route : ActivatedRoute) { }
+  constructor(private serversService : ServiceService, private router:Router, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
   get  servidores():Server []{
-    return this.ssService.servers;
+    return this.serversService.servers;
   }
 
   onReload(){

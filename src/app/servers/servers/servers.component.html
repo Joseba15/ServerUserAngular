@@ -2,14 +2,7 @@
     <div class="col">
         
         <div class="card mt-2" *ngFor="let item of servidores ">
-            <div class="card-header">{{item.name}}</div>
-            <div class="card-body">
-                <h5 class="card-title">Server status</h5>
-                <p class="card-text">{{item.status}}</p>
-            </div>
-            <br>
-            <a href="#" class="list-group-item list-group-item-action" [routerLink]="['/servers', item.name , 'edit']"  
-            [queryParams]="{allowEdit: '1'}" fragment="loading">Edit Server</a>
+            <a [routerLink]="[item.id]">Server {{item.id}}</a>
         </div>
         <br>
         <button class="btn btn-info" (click)="onReload()">Reload Servers</button>
@@ -17,3 +10,5 @@
 
     </div>
 </div>
+
+<router-outlet></router-outlet>

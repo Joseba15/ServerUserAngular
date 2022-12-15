@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   
   onLoadServers() {
     // complex code that connects to a backend
-   
     // navigation to Servers page
     this.router.navigate(['/servers'])
   }
